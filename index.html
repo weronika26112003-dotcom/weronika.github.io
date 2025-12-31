@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weronika Nowak | </title>
+    <title>Weronika Nowak | Digital CV</title>
     <meta name="description" content="CV Weroniki Nowak - Studentki Zarządzania i Biznesu Międzynarodowego.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,13 +19,13 @@
                 extend: {
                     colors: {
                         cyber: {
-                            bg: '#050a10',       /* Deepest Void */
-                            card: '#0f1724',     /* Card Surface */
-                            primary: '#00ff94',  /* Neon Green (Gaming/Growth) */
-                            accent: '#06b6d4',   /* Cyan (Tech/Stream) */
-                            text: '#e2e8f0',     /* Off-white */
-                            dim: '#94a3b8',      /* Muted */
-                            border: '#1e293b',   /* Subtle Border */
+                            bg: '#050a10',       /* Bardzo ciemne tło */
+                            card: '#0f1724',     /* Tło kart */
+                            primary: '#00ff94',  /* Neonowa zieleń (Akcent) */
+                            accent: '#06b6d4',   /* Cyjan */
+                            text: '#e2e8f0',     /* Jasny tekst */
+                            dim: '#94a3b8',      /* Przygaszony tekst */
+                            border: '#1e293b',   /* Subtelne obramowanie */
                         }
                     },
                     fontFamily: {
@@ -47,19 +47,20 @@
     <style>
         body { background-color: #050a10; color: #e2e8f0; }
         
+        /* Efekt szkła */
         .glass-panel {
             background: rgba(15, 23, 36, 0.6);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Neon Glow Effect */
+        /* Neonowa poświata po najechaniu */
         .neon-glow:hover {
             box-shadow: 0 0 20px rgba(0, 255, 148, 0.15);
             border-color: rgba(0, 255, 148, 0.5);
         }
 
-        /* Custom Scrollbar */
+        /* Pasek przewijania */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #050a10; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
@@ -88,10 +89,10 @@
                 
                 <div class="hidden md:flex space-x-8 items-center text-sm font-medium font-mono">
                     <a href="#about" class="text-cyber-dim hover:text-cyber-primary transition">/O MNIE</a>
-                    <a href="#stack" class="text-cyber-dim hover:text-cyber-primary transition">/TECH STACK</a>
+                    <a href="#stack" class="text-cyber-dim hover:text-cyber-primary transition">/TECHNOLOGIE</a>
                     <a href="#experience" class="text-cyber-dim hover:text-cyber-primary transition">/DOŚWIADCZENIE</a>
                     <a href="#contact" class="px-5 py-2 border border-cyber-primary/30 text-cyber-primary rounded hover:bg-cyber-primary hover:text-black transition duration-300">
-                        CONNECT
+                        KONTAKT
                     </a>
                 </div>
             </div>
@@ -104,7 +105,7 @@
         <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center relative z-10">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 border border-cyber-accent/30 rounded-full bg-cyber-accent/5 animate-fade-in">
                 <span class="w-2 h-2 bg-cyber-primary rounded-full animate-pulse"></span>
-                <p class="font-mono text-xs text-cyber-accent tracking-widest uppercase">Open to Work: Operations & AI</p>
+                <p class="font-mono text-xs text-cyber-accent tracking-widest uppercase">Digital CV</p>
             </div>
             
             <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6 animate-fade-in" style="animation-delay: 0.1s">
@@ -113,15 +114,15 @@
             
             <p class="text-xl md:text-2xl text-cyber-dim font-light max-w-3xl mx-auto mb-10 animate-fade-in" style="animation-delay: 0.2s">
                 Studentka Zarządzania i Biznesu Międzynarodowego. <br>
-                Łączę <span class="text-white font-medium">analitykę</span> z energią <span class="gradient-text font-bold">Gen Z</span> i pasją do <span class="text-white font-medium">narzędzi AI</span>.
+                Łączę <span class="text-white font-medium">analitykę</span> z energią <span class="gradient-text font-bold"></span> i pasją do <span class="text-white font-medium">narzędzi AI</span>.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style="animation-delay: 0.3s">
                 <a href="#contact" class="px-8 py-4 bg-cyber-primary text-black font-bold font-mono rounded hover:shadow-[0_0_20px_rgba(0,255,148,0.4)] transition-all duration-300">
-                    HIRE ME_
+                    ZATRUDNIJ MNIE
                 </a>
                 <a href="#stack" class="px-8 py-4 border border-white/20 text-white font-mono rounded hover:border-cyber-accent hover:text-cyber-accent hover:bg-white/5 transition-all duration-300">
-                    VIEW SKILLS_
+                    UMIEJĘTNOŚCI
                 </a>
             </div>
         </div>
@@ -134,13 +135,13 @@
                 <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyber-primary to-transparent opacity-50"></div>
                 
                 <p class="text-lg leading-relaxed text-gray-300 font-light mb-8">
-                    "Jestem ambitną studentką, która szybko adaptuje się do zmian. W pracy wykorzystuję <strong class="text-cyber-primary">Sztuczną Inteligencję (AI)</strong>, by działać sprawniej i automatyzować codzienne zadania. Cenię porządek, ale gdy coś idzie nie tak, włączam tryb kreatywnego <span class="text-white border-b border-cyber-accent">problem-solvingu</span>. Szukam miejsca, gdzie mogę wykorzystać moją naturalną ciekawość technologiczną i energię do usprawniania procesów."
+                    [span_0](start_span)"Jestem ambitną studentką[span_0](end_span)[span_1](start_span), która szybko adaptuje się do zmian[span_1](end_span). [span_2](start_span)W pracy wykorzystuję <strong class="text-cyber-primary">Sztuczną Inteligencję (AI)</strong>, by działać sprawniej i automatyzować codzienne zadania[span_2](end_span). [span_3](start_span)Cenię porządek, ale gdy coś idzie nie tak, włączam tryb kreatywnego <span class="text-white border-b border-cyber-accent">rozwiązywania problemów</span>[span_3](end_span). [span_4](start_span)Szukam miejsca, gdzie mogę wykorzystać moją naturalną ciekawość technologiczną i energię do usprawniania procesów[span_4](end_span)."
                 </p>
 
                 <div class="flex justify-center gap-3 flex-wrap">
                     <span class="px-4 py-1.5 border border-white/10 bg-white/5 rounded-full text-sm text-cyber-dim font-mono">#Formuła1</span>
-                    <span class="px-4 py-1.5 border border-white/10 bg-white/5 rounded-full text-sm text-cyber-dim font-mono">#Travel</span>
-                    <span class="px-4 py-1.5 border border-white/10 bg-white/5 rounded-full text-sm text-cyber-dim font-mono">#AI_Tools</span>
+                    <span class="px-4 py-1.5 border border-white/10 bg-white/5 rounded-full text-sm text-cyber-dim font-mono">#Podróże</span>
+                    <span class="px-4 py-1.5 border border-white/10 bg-white/5 rounded-full text-sm text-cyber-dim font-mono">#Narzędzia_AI</span>
                     <span class="px-4 py-1.5 border border-white/10 bg-white/5 rounded-full text-sm text-cyber-dim font-mono">#GenZ</span>
                 </div>
             </div>
@@ -151,7 +152,7 @@
         <div class="absolute inset-0 bg-cyber-gradient opacity-20 pointer-events-none"></div>
         <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
             <h2 class="font-display text-3xl font-bold text-white mb-12 text-center">
-                My Tech Stack & Skills
+                Technologie i Narzędzia
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -160,11 +161,11 @@
                     <div class="text-cyber-accent mb-4">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
                     </div>
-                    <h3 class="font-display text-lg font-bold text-white mb-4">Organization</h3>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">Organizacja</h3>
                     <ul class="space-y-2 text-sm text-gray-400 font-mono">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>ClickUp</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>Miro</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>MS Outlook</li>
+                        [span_5](start_span)<li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>ClickUp[span_5](end_span)</li>
+                        [span_6](start_span)<li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>Miro[span_6](end_span)</li>
+                        [span_7](start_span)<li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>MS Outlook[span_7](end_span)</li>
                     </ul>
                 </div>
 
@@ -172,11 +173,11 @@
                     <div class="text-cyber-primary mb-4">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
-                    <h3 class="font-display text-lg font-bold text-white mb-4">AI & Tech</h3>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">AI i Technologie</h3>
                     <ul class="space-y-2 text-sm text-gray-400 font-mono">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>ChatGPT / ClaudeAI</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>Gemini</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-500 rounded-full mr-2"></span>GitHub & Vercel (Basic)</li>
+                        [span_8](start_span)<li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>ChatGPT / ClaudeAI[span_8](end_span)</li>
+                        [span_9](start_span)<li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>Gemini[span_9](end_span)</li>
+                        [span_10](start_span)<li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-500 rounded-full mr-2"></span>GitHub & Vercel (Podstawy)[span_10](end_span)</li>
                     </ul>
                 </div>
 
@@ -184,11 +185,11 @@
                     <div class="text-pink-500 mb-4">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
                     </div>
-                    <h3 class="font-display text-lg font-bold text-white mb-4">Creative</h3>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">Kreatywne</h3>
                     <ul class="space-y-2 text-sm text-gray-400 font-mono">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>Canva</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>CapCut</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>MS PowerPoint</li>
+                        [span_11](start_span)<li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>Canva[span_11](end_span)</li>
+                        [span_12](start_span)<li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>CapCut[span_12](end_span)</li>
+                        [span_13](start_span)<li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>MS PowerPoint[span_13](end_span)</li>
                     </ul>
                 </div>
 
@@ -196,12 +197,12 @@
                     <div class="text-purple-400 mb-4">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
                     </div>
-                    <h3 class="font-display text-lg font-bold text-white mb-4">Languages</h3>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">Języki</h3>
                     <ul class="space-y-2 text-sm text-gray-400 font-mono">
-                        <li class="flex justify-between"><span>Angielski</span> <span class="text-cyber-primary">C1</span></li>
-                        <li class="flex justify-between"><span>Polski</span> <span class="text-cyber-primary">Native</span></li>
-                        <li class="flex justify-between"><span>Francuski</span> <span class="text-gray-500">B1</span></li>
-                        <li class="flex justify-between"><span>Turecki</span> <span class="text-gray-500">A2</span></li>
+                        [span_14](start_span)<li class="flex justify-between"><span>Angielski</span> <span class="text-cyber-primary">C1[span_14](end_span)</span></li>
+                        [span_15](start_span)<li class="flex justify-between"><span>Polski</span> <span class="text-cyber-primary">Ojczysty[span_15](end_span)</span></li>
+                        [span_16](start_span)<li class="flex justify-between"><span>Francuski</span> <span class="text-gray-500">B1[span_16](end_span)</span></li>
+                        [span_17](start_span)<li class="flex justify-between"><span>Turecki</span> <span class="text-gray-500">A2[span_17](end_span)</span></li>
                     </ul>
                 </div>
 
@@ -222,12 +223,12 @@
                             <h3 class="text-xl font-bold text-white">Doradca Sprzedaży</h3>
                             <p class="text-cyber-primary font-mono">ARKET</p>
                         </div>
-                        <span class="text-cyber-dim text-sm font-mono mt-1">Sierpień 2024 - Obecnie</span>
+                        [span_18](start_span)<span class="text-cyber-dim text-sm font-mono mt-1">Sierpień 2024 - Obecnie[span_18](end_span)</span>
                     </div>
                     <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
-                        <li>Doradztwo i obsługa klienta w języku polskim i angielskim.</li>
-                        <li>Dbanie o ekspozycję i wizerunek marki (Visual Merchandising).</li>
-                        <li>Współpraca zespołowa i rozwiązywanie problemów pod presją czasu.</li>
+                        [span_19](start_span)<li>Doradztwo i obsługa klienta w języku polskim i angielskim[span_19](end_span).</li>
+                        [span_20](start_span)<li>Dbanie o ekspozycję i wizerunek marki oraz obsługa kasy fiskalnej[span_20](end_span).</li>
+                        [span_21](start_span)<li>Współpraca zespołowa i rozwiązywanie problemów klienta[span_21](end_span).</li>
                     </ul>
                 </div>
 
@@ -237,12 +238,12 @@
                             <h3 class="text-xl font-bold text-white">Assistance</h3>
                             <p class="text-cyber-primary font-mono">Firma PZU</p>
                         </div>
-                        <span class="text-cyber-dim text-sm font-mono mt-1">Wrzesień 2023 - Luty 2024</span>
+                        [span_22](start_span)<span class="text-cyber-dim text-sm font-mono mt-1">Wrzesień 2023 - Luty 2024[span_22](end_span)</span>
                     </div>
                     <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
-                        <li>Obsługa połączeń przychodzących i organizacja pomocy operacyjnej.</li>
-                        <li>Praca z systemami baz danych i dokumentacją.</li>
-                        <li>Samodzielne podejmowanie decyzji w sytuacjach kryzysowych.</li>
+                        [span_23](start_span)<li>Obsługa połączeń przychodzących i organizacja pomocy operacyjnej[span_23](end_span).</li>
+                        [span_24](start_span)<li>Wprowadzanie danych do systemu i praca w zespole operacyjnym[span_24](end_span).</li>
+                        [span_25](start_span)<li>Zdolność działania pod presją i samodzielne podejmowanie decyzji[span_25](end_span).</li>
                     </ul>
                 </div>
 
@@ -252,9 +253,9 @@
                             <h3 class="text-xl font-bold text-white">Wymiany Barterowe (Aktywność dodatkowa)</h3>
                             <p class="text-cyber-accent font-mono">Enactus PW</p>
                         </div>
-                        <span class="text-cyber-dim text-sm font-mono mt-1">Październik 2022 - 2023</span>
+                        [span_26](start_span)<span class="text-cyber-dim text-sm font-mono mt-1">Październik 2022 - 2023[span_26](end_span)</span>
                     </div>
-                    <p class="text-gray-400 text-sm">Rozwijanie kompetencji pracy zespołowej i komunikacji w ramach projektów studenckich.</p>
+                    [span_27](start_span)<p class="text-gray-400 text-sm">Rozwijanie kompetencji pracy zespołowej i komunikacji w ramach projektów studenckich[span_27](end_span).</p>
                 </div>
             </div>
         </div>
@@ -271,19 +272,19 @@
                             <span class="absolute -left-[21px] top-1.5 w-3 h-3 bg-cyber-primary rounded-full shadow-[0_0_10px_#00ff94] group-hover:scale-125 transition"></span>
                             <h4 class="text-lg font-bold text-white">Uniwersytet Civitas <span class="text-xs text-cyber-dim font-normal ml-2">(Warszawa, Polska)</span></h4>
                             <p class="text-gray-400">Zarządzanie i Biznes Międzynarodowy</p>
-                            <p class="text-cyber-primary text-sm font-mono">2023 - Obecnie</p>
+                            [span_28](start_span)<p class="text-cyber-primary text-sm font-mono">2023 - Obecnie[span_28](end_span)</p>
                         </div>
                         <div class="relative group">
                             <span class="absolute -left-[21px] top-1.5 w-3 h-3 bg-white/20 rounded-full group-hover:bg-cyber-accent transition"></span>
                             <h4 class="text-lg font-bold text-white">Politechnika Warszawska <span class="text-xs text-cyber-dim font-normal ml-2">(Warszawa, Polska)</span></h4>
                             <p class="text-gray-400">Inżynieria Materiałowa</p>
-                            <p class="text-cyber-dim text-sm font-mono">I rok ukończony (zmiana kierunku)</p>
+                            [span_29](start_span)<p class="text-cyber-dim text-sm font-mono">2022 - 2023 (I rok ukończony, zmiana kierunku)[span_29](end_span)</p>
                         </div>
                         <div class="relative group">
                             <span class="absolute -left-[21px] top-1.5 w-3 h-3 bg-white/20 rounded-full group-hover:bg-cyber-accent transition"></span>
                             <h4 class="text-lg font-bold text-white">I Liceum im. T. Kościuszki <span class="text-xs text-cyber-dim font-normal ml-2">(Wieluń, Polska)</span></h4>
                             <p class="text-gray-400">Profil biologiczno-chemiczny</p>
-                            <p class="text-cyber-dim text-sm font-mono">2019 - 2022</p>
+                            [span_30](start_span)<p class="text-cyber-dim text-sm font-mono">2019 - 2022[span_30](end_span)</p>
                         </div>
                     </div>
                 </div>
@@ -295,14 +296,14 @@
                             <span class="text-cyber-primary mr-3 text-xl">●</span>
                             <div>
                                 <strong class="block text-white">MS Excel dla średniozaawansowanych</strong>
-                                <span class="text-sm text-cyber-dim">MACROMIND (2025)</span>
+                                [span_31](start_span)<span class="text-sm text-cyber-dim">MACROMIND (2025)[span_31](end_span)</span>
                             </div>
                         </div>
                         <div class="glass-panel p-4 rounded border border-white/5 flex items-start">
                             <span class="text-cyber-primary mr-3 text-xl">●</span>
                             <div>
                                 <strong class="block text-white">Marketing internetowy - zaawansowany</strong>
-                                <span class="text-sm text-cyber-dim">PARP (2024)</span>
+                                [span_32](start_span)<span class="text-sm text-cyber-dim">PARP (2024)[span_32](end_span)</span>
                             </div>
                         </div>
                     </div>
@@ -313,7 +314,7 @@
 
     <footer id="contact" class="py-24 border-t border-white/5 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <h2 class="font-display text-4xl font-bold text-center text-white mb-16">Connect for Collaboration</h2>
+            <h2 class="font-display text-4xl font-bold text-center text-white mb-16">Porozmawiajmy</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <a href="tel:+48690358317" class="glass-panel p-8 text-center rounded-xl hover:border-cyber-primary transition group">
