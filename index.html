@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+
+  <!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weronika Nowak | Portfolio & CV</title>
-    <meta name="description" content="Portfolio and CV of Weronika Nowak - Management Student & Creative Marketing Enthusiast.">
+    <title>Weronika Nowak | </title>
+    <meta name="description" content="CV Weroniki Nowak - Studentki Zarządzania i Biznesu Międzynarodowego.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -17,20 +18,26 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            light: '#2d6a4f',
-                            DEFAULT: '#1b4332', // Forest Green
-                            dark: '#081c15',
-                        },
-                        neutral: {
-                            50: '#f9fafb',
-                            100: '#f3f4f6',
-                            900: '#111827',
+                        cyber: {
+                            bg: '#050a10',       /* Deepest Void */
+                            card: '#0f1724',     /* Card Surface */
+                            primary: '#00ff94',  /* Neon Green (Gaming/Growth) */
+                            accent: '#06b6d4',   /* Cyan (Tech/Stream) */
+                            text: '#e2e8f0',     /* Off-white */
+                            dim: '#94a3b8',      /* Muted */
+                            border: '#1e293b',   /* Subtle Border */
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)",
+                        'cyber-gradient': "linear-gradient(135deg, rgba(0, 255, 148, 0.1), rgba(6, 182, 212, 0.1))",
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     }
                 }
             }
@@ -38,307 +45,295 @@
     </script>
 
     <style>
-        /* Glassmorphism for Navbar */
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+        body { background-color: #050a10; color: #e2e8f0; }
+        
+        .glass-panel {
+            background: rgba(15, 23, 36, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        /* Entrance Animation */
-        @keyframes fade-in-up {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        /* Neon Glow Effect */
+        .neon-glow:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 148, 0.15);
+            border-color: rgba(0, 255, 148, 0.5);
         }
-        .animate-fade-in-up {
-            animation: fade-in-up 0.8s ease-out forwards;
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050a10; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ff94; }
+
+        .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; transform: translateY(10px); }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #00ff94, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-neutral-50 text-neutral-900 font-sans antialiased selection:bg-brand selection:text-white">
+<body class="font-sans antialiased selection:bg-cyber-primary selection:text-black">
 
-    <nav class="fixed w-full top-0 z-50 glass-nav transition-all duration-300">
+    <div class="fixed inset-0 bg-[size:40px_40px] bg-grid-pattern opacity-[0.07] pointer-events-none -z-10"></div>
+
+    <nav class="fixed w-full top-0 z-50 glass-panel border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="#" class="font-serif text-2xl font-bold text-brand tracking-tight hover:opacity-80 transition">
-                    WN<span class="text-brand-light">.</span>
+                <a href="#" class="font-display text-2xl font-bold tracking-tighter text-white hover:text-cyber-primary transition">
+                    WN<span class="text-cyber-primary">.</span>
                 </a>
-
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-sm font-medium text-gray-600 hover:text-brand transition relative group">
-                        About Me
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all group-hover:w-full"></span>
+                
+                <div class="hidden md:flex space-x-8 items-center text-sm font-medium font-mono">
+                    <a href="#about" class="text-cyber-dim hover:text-cyber-primary transition">/O MNIE</a>
+                    <a href="#stack" class="text-cyber-dim hover:text-cyber-primary transition">/TECH STACK</a>
+                    <a href="#experience" class="text-cyber-dim hover:text-cyber-primary transition">/DOŚWIADCZENIE</a>
+                    <a href="#contact" class="px-5 py-2 border border-cyber-primary/30 text-cyber-primary rounded hover:bg-cyber-primary hover:text-black transition duration-300">
+                        CONNECT
                     </a>
-                    <a href="#experience" class="text-sm font-medium text-gray-600 hover:text-brand transition relative group">
-                        Experience
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all group-hover:w-full"></span>
-                    </a>
-                    <a href="#education" class="text-sm font-medium text-gray-600 hover:text-brand transition relative group">
-                        Education
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand transition-all group-hover:w-full"></span>
-                    </a>
-                    <a href="#contact" class="px-5 py-2.5 bg-brand text-white text-sm font-medium rounded-full hover:bg-brand-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                        Contact Me
-                    </a>
-                </div>
-
-                <div class="md:hidden flex items-center">
-                    <button class="text-gray-600 focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-40 overflow-hidden">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+    <header class="relative pt-40 pb-24 lg:pt-52 lg:pb-32 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-cyber-primary opacity-[0.06] blur-[120px] rounded-full -z-10 animate-pulse-slow"></div>
+
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 border border-cyber-accent/30 rounded-full bg-cyber-accent/5 animate-fade-in">
+                <span class="w-2 h-2 bg-cyber-primary rounded-full animate-pulse"></span>
+                <p class="font-mono text-xs text-cyber-accent tracking-widest uppercase">Open to Work: Operations & AI</p>
+            </div>
             
-            <p class="text-brand-light font-medium tracking-widest uppercase text-sm mb-6 animate-fade-in-up">Digital CV & Portfolio</p>
-            
-            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-brand-dark leading-tight mb-8 animate-fade-in-up" style="animation-delay: 0.1s">
+            <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6 animate-fade-in" style="animation-delay: 0.1s">
                 Weronika Nowak
             </h1>
             
-            <p class="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed font-light max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s">
-                Management & International Business Student. <br class="hidden md:block" />
-                Combining analytical thinking with creative ambition.
+            <p class="text-xl md:text-2xl text-cyber-dim font-light max-w-3xl mx-auto mb-10 animate-fade-in" style="animation-delay: 0.2s">
+                Studentka Zarządzania i Biznesu Międzynarodowego. <br>
+                Łączę <span class="text-white font-medium">analitykę</span> z energią <span class="gradient-text font-bold">Gen Z</span> i pasją do <span class="text-white font-medium">narzędzi AI</span>.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.3s">
-                <a href="#contact" class="inline-flex justify-center items-center px-10 py-4 bg-brand text-white rounded-full font-medium shadow-lg shadow-brand/20 hover:shadow-xl hover:shadow-brand/30 hover:-translate-y-1 transition-all duration-300">
-                    Hire Me
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style="animation-delay: 0.3s">
+                <a href="#contact" class="px-8 py-4 bg-cyber-primary text-black font-bold font-mono rounded hover:shadow-[0_0_20px_rgba(0,255,148,0.4)] transition-all duration-300">
+                    HIRE ME_
                 </a>
-                <a href="#experience" class="inline-flex justify-center items-center px-10 py-4 bg-white text-brand border border-gray-200 rounded-full font-medium shadow-sm hover:bg-gray-50 transition-all duration-300">
-                    View Experience
+                <a href="#stack" class="px-8 py-4 border border-white/20 text-white font-mono rounded hover:border-cyber-accent hover:text-cyber-accent hover:bg-white/5 transition-all duration-300">
+                    VIEW SKILLS_
                 </a>
             </div>
-        </div>
-        
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 opacity-5">
-             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-[800px] h-[800px] text-brand fill-current">
-                <path d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.5,70.6,31.6C59,41.7,47.1,49,35.3,55.9C23.5,62.8,11.8,69.3,-1.1,71.2C-14,73.1,-27.9,70.4,-40.3,64.1C-52.7,57.8,-63.5,47.9,-71.4,36.1C-79.3,24.3,-84.2,10.6,-82.3,-2.2C-80.4,-15,-71.7,-26.9,-61.7,-36.3C-51.7,-45.7,-40.4,-52.6,-28.9,-61.2C-17.4,-69.8,-5.7,-80.1,5.6,-89.8C16.9,-99.5,30.5,-108.6,44.7,-76.4Z" transform="translate(100 100)" />
-            </svg>
         </div>
     </header>
 
-    <section class="py-20 bg-white border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="flex flex-col items-center text-center p-6 rounded-2xl hover:bg-neutral-50 transition-all group">
-                    <div class="w-14 h-14 bg-brand/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-colors text-brand">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold mb-3 text-brand-dark">Adaptability</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm">I learn quickly and eagerly take on new challenges. My academic pivot proves my flexibility and resilience.</p>
-                </div>
-                <div class="flex flex-col items-center text-center p-6 rounded-2xl hover:bg-neutral-50 transition-all group">
-                    <div class="w-14 h-14 bg-brand/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-colors text-brand">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold mb-3 text-brand-dark">Teamwork</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm">Experience at ARKET, PZU, and Enactus PW has honed my ability to communicate and collaborate effectively.</p>
-                </div>
-                <div class="flex flex-col items-center text-center p-6 rounded-2xl hover:bg-neutral-50 transition-all group">
-                    <div class="w-14 h-14 bg-brand/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand group-hover:text-white transition-colors text-brand">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold mb-3 text-brand-dark">Organization</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm">Goal-oriented mindset, analytical thinking, and the ability to work under pressure are my key assets.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-24 bg-brand-dark text-white relative overflow-hidden">
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-8">About Me</h2>
-            <p class="text-lg md:text-xl leading-relaxed text-gray-300 font-light">
-                "I have experience in customer service and teamwork. I learn quickly, organize my work well, and willingly take on new challenges. I am looking for professional development opportunities in the creative industry. I care about working in a place that provides space for learning and collaboration."
-            </p>
-            
-            <div class="mt-12 flex justify-center gap-4 flex-wrap">
-                <span class="px-5 py-2 border border-gray-600 rounded-full text-sm text-gray-300 hover:border-brand hover:text-white transition cursor-default">Formula 1</span>
-                <span class="px-5 py-2 border border-gray-600 rounded-full text-sm text-gray-300 hover:border-brand hover:text-white transition cursor-default">Languages</span>
-                <span class="px-5 py-2 border border-gray-600 rounded-full text-sm text-gray-300 hover:border-brand hover:text-white transition cursor-default">Travel</span>
-                <span class="px-5 py-2 border border-gray-600 rounded-full text-sm text-gray-300 hover:border-brand hover:text-white transition cursor-default">Painting</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="py-24 bg-neutral-50">
-        <div class="max-w-5xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-brand text-sm font-bold tracking-widest uppercase">Career</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-neutral-900 mt-3">Professional Experience</h2>
-            </div>
-
-            <div class="space-y-12">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-                    <div class="flex flex-col md:flex-row justify-between md:items-start mb-4">
-                        <div>
-                            <h3 class="font-serif text-2xl font-bold text-brand-dark">Sales Advisor</h3>
-                            <p class="text-brand font-medium">ARKET</p>
-                        </div>
-                        <span class="text-gray-500 text-sm mt-2 md:mt-0 bg-gray-100 px-3 py-1 rounded-full">August 2024 - Present</span>
-                    </div>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-4 ml-2">
-                        <li>Customer service and advisory in both Polish and English.</li>
-                        <li>Handling cash register operations, visual merchandising, and brand image maintenance.</li>
-                        <li>Team collaboration and customer problem-solving.</li>
-                    </ul>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-                    <div class="flex flex-col md:flex-row justify-between md:items-start mb-4">
-                        <div>
-                            <h3 class="font-serif text-2xl font-bold text-brand-dark">Assistance Coordinator</h3>
-                            <p class="text-brand font-medium">PZU Group</p>
-                        </div>
-                        <span class="text-gray-500 text-sm mt-2 md:mt-0 bg-gray-100 px-3 py-1 rounded-full">September 2023 - February 2024</span>
-                    </div>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2 mt-4 ml-2">
-                        <li>Handling incoming calls and organizing roadside assistance.</li>
-                        <li>Data entry and working within the operations team.</li>
-                        <li>Ability to work under pressure and react quickly to emergencies.</li>
-                    </ul>
-                </div>
+    <section id="about" class="py-20 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-3xl font-bold text-white mb-8">O Mnie</h2>
+            <div class="glass-panel p-8 md:p-12 rounded-2xl relative overflow-hidden group hover:border-cyber-accent/30 transition-all duration-500">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyber-primary to-transparent opacity-50"></div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow border-l-4 border-l-brand">
-                    <div class="flex flex-col md:flex-row justify-between md:items-start mb-4">
-                        <div>
-                            <h3 class="font-serif text-xl font-bold text-brand-dark">Barter Exchanges (Extracurricular)</h3>
-                            <p class="text-brand font-medium">Enactus PW</p>
-                        </div>
-                        <span class="text-gray-500 text-sm mt-2 md:mt-0 bg-gray-100 px-3 py-1 rounded-full">October 2022 - 2023</span>
-                    </div>
-                    <p class="text-gray-600 mt-4">Developing teamwork and communication skills within a student organization project.</p>
+                <p class="text-lg leading-relaxed text-gray-300 font-light mb-8">
+                    "Jestem ambitną studentką, która szybko adaptuje się do zmian. W pracy wykorzystuję <strong class="text-cyber-primary">Sztuczną Inteligencję (AI)</strong>, by działać sprawniej i automatyzować codzienne zadania. Cenię porządek, ale gdy coś idzie nie tak, włączam tryb kreatywnego <span class="text-white border-b border-cyber-accent">problem-solvingu</span>. Szukam miejsca, gdzie mogę wykorzystać moją naturalną ciekawość technologiczną i energię do usprawniania procesów."
+                </p>
+
+                <div class="flex justify-center gap-3 flex-wrap">
+                    <span class="px-4 py-1.5 border border-white/10 bg-white/5 rounded-full text-sm text-cyber-dim font-mono">#Formuła1</span>
+                    <span class="px-4 py-1.5 border border-white/10 bg-white/5 rounded-full text-sm text-cyber-dim font-mono">#Travel</span>
+                    <span class="px-4 py-1.5 border border-white/10 bg-white/5 rounded-full text-sm text-cyber-dim font-mono">#AI_Tools</span>
+                    <span class="px-4 py-1.5 border border-white/10 bg-white/5 rounded-full text-sm text-cyber-dim font-mono">#GenZ</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="py-24 bg-white">
+    <section id="stack" class="py-24 bg-cyber-card border-y border-white/5 relative">
+        <div class="absolute inset-0 bg-cyber-gradient opacity-20 pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
+            <h2 class="font-display text-3xl font-bold text-white mb-12 text-center">
+                My Tech Stack & Skills
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="glass-panel p-6 rounded-xl neon-glow transition-all duration-300">
+                    <div class="text-cyber-accent mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">Organization</h3>
+                    <ul class="space-y-2 text-sm text-gray-400 font-mono">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>ClickUp</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>Miro</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>MS Outlook</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl neon-glow transition-all duration-300 border-cyber-primary/20">
+                    <div class="text-cyber-primary mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">AI & Tech</h3>
+                    <ul class="space-y-2 text-sm text-gray-400 font-mono">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>ChatGPT / ClaudeAI</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>Gemini</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-500 rounded-full mr-2"></span>GitHub & Vercel (Basic)</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl neon-glow transition-all duration-300">
+                    <div class="text-pink-500 mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">Creative</h3>
+                    <ul class="space-y-2 text-sm text-gray-400 font-mono">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>Canva</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>CapCut</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-primary rounded-full mr-2"></span>MS PowerPoint</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-6 rounded-xl neon-glow transition-all duration-300">
+                    <div class="text-purple-400 mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-4">Languages</h3>
+                    <ul class="space-y-2 text-sm text-gray-400 font-mono">
+                        <li class="flex justify-between"><span>Angielski</span> <span class="text-cyber-primary">C1</span></li>
+                        <li class="flex justify-between"><span>Polski</span> <span class="text-cyber-primary">Native</span></li>
+                        <li class="flex justify-between"><span>Francuski</span> <span class="text-gray-500">B1</span></li>
+                        <li class="flex justify-between"><span>Turecki</span> <span class="text-gray-500">A2</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24">
         <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <h2 class="font-display text-3xl font-bold text-white mb-12 flex items-center">
+                <span class="w-2 h-8 bg-cyber-primary mr-4 rounded-sm"></span> Doświadczenie
+            </h2>
+
+            <div class="space-y-6">
+                <div class="glass-panel p-6 md:p-8 rounded-xl hover:border-cyber-primary/50 transition duration-300">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Doradca Sprzedaży</h3>
+                            <p class="text-cyber-primary font-mono">ARKET</p>
+                        </div>
+                        <span class="text-cyber-dim text-sm font-mono mt-1">Sierpień 2024 - Obecnie</span>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                        <li>Doradztwo i obsługa klienta w języku polskim i angielskim.</li>
+                        <li>Dbanie o ekspozycję i wizerunek marki (Visual Merchandising).</li>
+                        <li>Współpraca zespołowa i rozwiązywanie problemów pod presją czasu.</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-6 md:p-8 rounded-xl hover:border-cyber-primary/50 transition duration-300">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Assistance</h3>
+                            <p class="text-cyber-primary font-mono">Firma PZU</p>
+                        </div>
+                        <span class="text-cyber-dim text-sm font-mono mt-1">Wrzesień 2023 - Luty 2024</span>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-400 space-y-2 text-sm">
+                        <li>Obsługa połączeń przychodzących i organizacja pomocy operacyjnej.</li>
+                        <li>Praca z systemami baz danych i dokumentacją.</li>
+                        <li>Samodzielne podejmowanie decyzji w sytuacjach kryzysowych.</li>
+                    </ul>
+                </div>
+
+                <div class="glass-panel p-6 md:p-8 rounded-xl hover:border-cyber-primary/50 transition duration-300 border-l-4 border-l-cyber-accent">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Wymiany Barterowe (Aktywność dodatkowa)</h3>
+                            <p class="text-cyber-accent font-mono">Enactus PW</p>
+                        </div>
+                        <span class="text-cyber-dim text-sm font-mono mt-1">Październik 2022 - 2023</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Rozwijanie kompetencji pracy zespołowej i komunikacji w ramach projektów studenckich.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-24 bg-cyber-card border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                
                 <div>
-                    <h2 class="font-serif text-3xl font-bold text-brand-dark mb-10 border-b pb-4 border-gray-200">Education</h2>
-                    <div class="space-y-8 relative border-l border-gray-200 ml-3 pl-8">
-                        
-                        <div class="relative">
-                            <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-brand"></span>
-                            <h4 class="font-bold text-lg text-gray-900">Collegium Civitas</h4>
-                            <p class="text-brand font-medium">Management & International Business</p>
-                            <span class="text-sm text-gray-500">2023 - Present</span>
+                    <h2 class="font-display text-2xl font-bold text-white mb-8 border-b border-white/10 pb-4">Edukacja</h2>
+                    <div class="space-y-8 pl-4 border-l border-white/10">
+                        <div class="relative group">
+                            <span class="absolute -left-[21px] top-1.5 w-3 h-3 bg-cyber-primary rounded-full shadow-[0_0_10px_#00ff94] group-hover:scale-125 transition"></span>
+                            <h4 class="text-lg font-bold text-white">Uniwersytet Civitas <span class="text-xs text-cyber-dim font-normal ml-2">(Warszawa, Polska)</span></h4>
+                            <p class="text-gray-400">Zarządzanie i Biznes Międzynarodowy</p>
+                            <p class="text-cyber-primary text-sm font-mono">2023 - Obecnie</p>
                         </div>
-
-                        <div class="relative">
-                            <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300"></span>
-                            <h4 class="font-bold text-lg text-gray-900">Warsaw University of Technology</h4>
-                            <p class="text-gray-600">Materials Science & Engineering</p>
-                            <span class="text-sm text-gray-500">1st year completed (Change of major)</span>
+                        <div class="relative group">
+                            <span class="absolute -left-[21px] top-1.5 w-3 h-3 bg-white/20 rounded-full group-hover:bg-cyber-accent transition"></span>
+                            <h4 class="text-lg font-bold text-white">Politechnika Warszawska <span class="text-xs text-cyber-dim font-normal ml-2">(Warszawa, Polska)</span></h4>
+                            <p class="text-gray-400">Inżynieria Materiałowa</p>
+                            <p class="text-cyber-dim text-sm font-mono">I rok ukończony (zmiana kierunku)</p>
                         </div>
-
-                        <div class="relative">
-                            <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white bg-gray-300"></span>
-                            <h4 class="font-bold text-lg text-gray-900">Tadeusz Kościuszko High School No. 1</h4>
-                            <p class="text-gray-600">Profile: Biology & Chemistry</p>
-                            <span class="text-sm text-gray-500">2019 - 2022</span>
+                        <div class="relative group">
+                            <span class="absolute -left-[21px] top-1.5 w-3 h-3 bg-white/20 rounded-full group-hover:bg-cyber-accent transition"></span>
+                            <h4 class="text-lg font-bold text-white">I Liceum im. T. Kościuszki <span class="text-xs text-cyber-dim font-normal ml-2">(Wieluń, Polska)</span></h4>
+                            <p class="text-gray-400">Profil biologiczno-chemiczny</p>
+                            <p class="text-cyber-dim text-sm font-mono">2019 - 2022</p>
                         </div>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="font-serif text-3xl font-bold text-brand-dark mb-10 border-b pb-4 border-gray-200">Skills</h2>
-                    
-                    <div class="mb-8">
-                        <h4 class="font-bold text-sm uppercase tracking-wide text-gray-500 mb-4">Languages</h4>
-                        <div class="space-y-4">
+                    <h2 class="font-display text-2xl font-bold text-white mb-8 border-b border-white/10 pb-4">Certyfikaty</h2>
+                    <div class="space-y-4">
+                        <div class="glass-panel p-4 rounded border border-white/5 flex items-start">
+                            <span class="text-cyber-primary mr-3 text-xl">●</span>
                             <div>
-                                <div class="flex justify-between text-sm font-medium mb-1"><span class="text-gray-800">Polish</span> <span class="text-gray-500">Native</span></div>
-                                <div class="w-full bg-gray-100 rounded-full h-2"><div class="bg-brand h-2 rounded-full" style="width: 100%"></div></div>
-                            </div>
-                            
-                            <div>
-                                <div class="flex justify-between text-sm font-medium mb-1"><span class="text-gray-800">English</span> <span class="text-brand">C1 (Advanced)</span></div>
-                                <div class="w-full bg-gray-100 rounded-full h-2"><div class="bg-brand h-2 rounded-full" style="width: 90%"></div></div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between text-sm font-medium mb-1"><span class="text-gray-800">French</span> <span class="text-gray-500">B1 (Intermediate)</span></div>
-                                <div class="w-full bg-gray-100 rounded-full h-2"><div class="bg-brand/60 h-2 rounded-full" style="width: 50%"></div></div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between text-sm font-medium mb-1"><span class="text-gray-800">Turkish</span> <span class="text-gray-500">A2 (Elementary)</span></div>
-                                <div class="w-full bg-gray-100 rounded-full h-2"><div class="bg-brand/30 h-2 rounded-full" style="width: 30%"></div></div>
+                                <strong class="block text-white">MS Excel dla średniozaawansowanych</strong>
+                                <span class="text-sm text-cyber-dim">MACROMIND (2025)</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="mb-8">
-                        <h4 class="font-bold text-sm uppercase tracking-wide text-gray-500 mb-4">Tools & Software</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded text-sm font-medium">MS Office</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded text-sm font-medium">Excel (Intermediate)</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded text-sm font-medium">Canva</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded text-sm font-medium">Miro</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded text-sm font-medium">CapCut</span>
+                        <div class="glass-panel p-4 rounded border border-white/5 flex items-start">
+                            <span class="text-cyber-primary mr-3 text-xl">●</span>
+                            <div>
+                                <strong class="block text-white">Marketing internetowy - zaawansowany</strong>
+                                <span class="text-sm text-cyber-dim">PARP (2024)</span>
+                            </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <h4 class="font-bold text-sm uppercase tracking-wide text-gray-500 mb-4">Certificates</h4>
-                        <ul class="space-y-3">
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-brand mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                                <span class="text-sm text-gray-700"><strong>MS Excel Intermediate</strong>, MACROMIND (2025)</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-brand mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                                <span class="text-sm text-gray-700"><strong>Internet Marketing</strong> (Advanced Level I), PARP (2024)</span>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="bg-brand-dark text-white pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-800 pb-12 mb-12">
-                <div>
-                    <h2 class="font-serif text-4xl font-bold mb-4">Let's work together.</h2>
-                    <p class="text-gray-400">Looking for an ambitious addition to your team?</p>
-                </div>
-                <div class="mt-8 md:mt-0">
-                    <a href="mailto:weronika.nowak00@icloud.com" class="inline-block px-8 py-4 bg-white text-brand-dark font-bold rounded-full hover:bg-gray-100 transition shadow-lg">
-                        Send Me an Email
-                    </a>
-                </div>
+    <footer id="contact" class="py-24 border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <h2 class="font-display text-4xl font-bold text-center text-white mb-16">Connect for Collaboration</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="tel:+48690358317" class="glass-panel p-8 text-center rounded-xl hover:border-cyber-primary transition group">
+                    <h3 class="text-lg font-bold text-white mb-2 font-display">Telefon</h3>
+                    <p class="text-cyber-dim group-hover:text-cyber-primary transition font-mono">+48 690 358 317</p>
+                </a>
+                
+                <a href="mailto:weronika.nowak00@icloud.com" class="glass-panel p-8 text-center rounded-xl hover:border-cyber-primary transition group">
+                    <h3 class="text-lg font-bold text-white mb-2 font-display">Email</h3>
+                    <p class="text-cyber-dim group-hover:text-cyber-primary transition font-mono">weronika.nowak00@icloud.com</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/weronika-nowak-58092b244" target="_blank" class="glass-panel p-8 text-center rounded-xl hover:border-cyber-primary transition group">
+                    <h3 class="text-lg font-bold text-white mb-2 font-display">LinkedIn</h3>
+                    <p class="text-cyber-dim group-hover:text-cyber-primary transition font-mono">Zobacz Profil &rarr;</p>
+                </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-400">
-                <div>
-                    <p class="text-white font-bold mb-2">Contact</p>
-                    <p><a href="mailto:weronika.nowak00@icloud.com" class="hover:text-white transition">weronika.nowak00@icloud.com</a></p>
-                    <p>+48 690 358 317</p>
-                </div>
-                <div>
-                    <p class="text-white font-bold mb-2">Location</p>
-                    <p>Warsaw, Poland</p>
-                </div>
-                <div>
-                    <p class="text-white font-bold mb-2">Social Media</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="hover:text-white transition">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-600">
-                &copy; 2025 Weronika Nowak. All rights reserved. Designed with Tailwind CSS.
+            <div class="text-center text-gray-600 text-xs mt-16 font-mono">
+                &copy; 2025 Weronika Nowak. Warszawa, Polska.
             </div>
         </div>
     </footer>
